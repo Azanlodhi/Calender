@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calendar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="calendar-header">
+      <div class="left">
+        <button id="prevBtn" aria-label="Previous month">&larr;</button>
+        <button id="nextBtn" aria-label="Next month">&rarr;</button>
+      </div>
+
+      <div class="center">
+        <div class="month-year">
+          <h2 id="monthLabel">Month</h2>
+          <span id="yearLabel">2025</span>
+        </div>
+
+        <div class="quick-picks">
+          <select id="monthSelect" aria-label="Select month"></select>
+          <input id="yearInput" type="number" min="1970" max="2100" aria-label="Enter year" />
+          <button id="goBtn">Go</button>
+          <button id="todayBtn">Today</button>
+        </div>
+      </div>
+
+      <div class="right">
+        <button id="toggleEvents" aria-pressed="false">Events</button>
+      </div>
+    </header>
+
+    <section class="calendar">
+      <div class="week-days">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+        <div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+
+      <div id="datesGrid" class="dates-grid" role="grid" aria-label="Calendar dates"></div>
+    </section>
+
+    <aside id="eventPanel" class="event-panel hidden" aria-hidden="true">
+      <h3 id="eventDateLabel">Events</h3>
+
+      <ul id="eventList" class="event-list" aria-live="polite"></ul>
+
+      <form id="eventForm" class="event-form">
+        <input id="eventTitle" placeholder="Event title" required />
+        <input id="eventTime" type="time" />
+        <textarea id="eventNotes" placeholder="Notes (optional)"></textarea>
+        <div class="event-form-actions">
+          <button type="submit">Add / Save</button>
+          <button type="button" id="closePanel">Close</button>
+        </div>
+      </form>
+      <button id="clearEvents" class="clear-btn">Clear all events for day</button>
+    </aside>
+
+    <footer class="credits">
+      <small>Built with ❤ — Simple calendar (events stored in localStorage)</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
